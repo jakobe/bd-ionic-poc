@@ -1,3 +1,7 @@
+ion-content {
+    background-color: transparent;
+}
+
 ion-list {
 
     ion-item {
@@ -19,8 +23,6 @@ ion-list {
             font-weight: bold;
             font-size: 1.2em;
             font-family: Arial, Helvetica, sans-serif;
-        }
-
-       
+        }      
     }
 }
