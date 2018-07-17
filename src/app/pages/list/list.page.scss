@@ -1,6 +1,7 @@
 ion-list {
 
     ion-item {
+        --detail-push-color: #007ac9;
         border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.3);
 
         p.title {
@@ -19,6 +20,7 @@ ion-list {
             font-size: 1.2em;
             font-family: Arial, Helvetica, sans-serif;
         }
-        
+
+       
     }
 }

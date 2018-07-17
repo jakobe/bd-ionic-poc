@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-page-list',
@@ -28,7 +29,7 @@ export class ListPage implements OnInit {
     }
   ];
   public items: Array<{ title: string; balance: number; currency: string; account: string }> = [];
-  constructor() {
+  constructor(public platform: Platform) {
     this.items = [...this.accounts];
   }
 
