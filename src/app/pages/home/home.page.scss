@@ -1,1 +1,48 @@
+:host {
+    background-image: url('/assets/img/frontpage-bg.jpg');
+    background-size: 300%;
+    background-repeat: no-repeat;   
+    background-position: bottom 50% right 30%;
+}
 
+ion-content {
+    background-color: transparent;
+
+    .menu-wrapper {
+        padding-top: 70%;
+    }
+
+    ion-list {
+        // background-color: rgba($color: black, $alpha: 0.5);
+        background-color: transparent;
+
+        ion-item {
+            color: white;
+            font-size: 150%;
+            // border-bottom: 1px solid rgba($color: white, $alpha: 0.4);
+            background-color: rgba($color: black, $alpha: 0.3);
+            margin-bottom: 1px;
+
+        }
+
+        ion-item.active {
+            background-color: rgba($color: #007ac9, $alpha: 0.75);
+            padding-top: 0.7em;
+            padding-bottom: 0.4em;
+            border-bottom: none;
+
+            ion-label::before {
+                content: '';
+                display: block;
+                width: 100px;
+                border-top: 4px solid white;
+                margin-bottom: 12px;
+            }
+
+        }
+    }
+}
+
+ion-footer {
+    background-color: white;
+}

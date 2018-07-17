@@ -1,16 +1,36 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-button>
+        <ion-icon name="settings"></ion-icon>
+      </ion-button>
+      <!-- <ion-button slot="end">
+          <ion-icon name="mail"></ion-icon>
+        </ion-button> -->
     </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
+    <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="mail-unread"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <!-- <ion-title>
+      Sydbank Mobilbank
+    </ion-title> -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the
-    <a target="_blank" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+<ion-content>
+  <div class="menu-wrapper">
+    <ion-list>
+      <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" *ngFor="let p of appPages; let idx = index" [ngClass]="{'active' : idx === 0}">
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <img src="/assets/img/sydbank-footer.png">
+</ion-footer>

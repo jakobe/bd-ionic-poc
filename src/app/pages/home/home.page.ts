@@ -6,5 +6,55 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  
+  public appPages = [
+    {
+      title: 'Velkommen',
+      url: '/home'
+    },
+    {
+      title: 'Kontooverblik',
+      url: '/list'
+    },
+    {
+      title: 'Depoter og puljer',
+      url: ''
+    },
+    {
+      title: 'NetBoks',
+      url: ''
+    },
+    {
+      title: 'Overførsel',
+      url: ''
+    },
+    {
+      title: 'Kortoversigt',
+      url: ''
+    },
+    {
+      title: 'Sydbank Favorit',
+      url: ''
+    },
+    {
+      title: 'Faste betalinger',
+      url: ''
+    },
+    {
+      title: 'Indbetalingskort',
+      url: ''
+    },
+    {
+      title: 'Investering',
+      url: ''
+    },
+    {
+      title: 'Forbrugsoverblik',
+      url: ''
+    },
+    {
+      title: 'Kontakt os',
+      url: ''
+    }
+  ];
 }
