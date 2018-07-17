@@ -10,6 +10,12 @@ export class ListPage implements OnInit {
   private selectedItem: any;
   private accounts = [
     {
+      title: 'Lønkonto',
+      balance: 6281.37,
+      currency: 'DKK',
+      account: '7915-0000030705'
+    },
+    {
       title: 'Opsparingskonto',
       balance: 21267.72,
       currency: 'DKK',
@@ -22,10 +28,16 @@ export class ListPage implements OnInit {
       account: '7915-0000180574'
     },
     {
-      title: 'Lønkonto',
-      balance: 6281.37,
+      title: 'Madkonto',
+      balance: 1227.45,
       currency: 'DKK',
-      account: '7915-0000030705'
+      account: '7915-0000291007'
+    },
+    {
+      title: 'Sommerferie',
+      balance: 14953.00,
+      currency: 'DKK',
+      account: '7915-0000170112'
     }
   ];
   public items: Array<{ title: string; balance: number; currency: string; account: string }> = [];
