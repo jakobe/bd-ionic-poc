@@ -1,0 +1,15 @@
+{
+    "background_color": "#007ac9",
+    "description": "Sydbank Ionic POC",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "assets/icon/sydbank.webp",
+        "sizes": "180x180",
+        "type": "image/webp"
+      }
+    ],
+    "name": "Sydbank Ionic POC",
+    "short_name": "Sydbank",
+    "start_url": "/"
+  }
