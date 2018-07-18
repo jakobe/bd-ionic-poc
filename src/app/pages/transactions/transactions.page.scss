@@ -1,9 +1,6 @@
 ion-list {
 
     ion-item {
-        --detail-push-color: #007ac9;
-        // border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.3);
-
         p.title {
             color: black !important;
             font-size: 1.0em;
@@ -11,7 +8,7 @@ ion-list {
         
         p.date {
             font-size: 0.7em;
-            color: #888;
+            color: #999;
         }
         
         p.amount {

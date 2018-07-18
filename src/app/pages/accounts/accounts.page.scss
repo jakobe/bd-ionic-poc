@@ -5,24 +5,21 @@ ion-content {
 ion-list {
 
     ion-item {
-        // --detail-push-color: #007ac9;
-        // border-bottom: 1px solid rgba($color: #ccc, $alpha: 0.3);
 
         p.title {
             color: black !important;
-            // font-weight: bold;
             font-size: 1.0em;
         }
         
         p.account-number {
             font-size: 0.7em;
-            color: #888;
+            color: #999;
         }
         
         p.balance {
             font-weight: bold;
             font-size: 1.0em;
-            // font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }      
     }
 }

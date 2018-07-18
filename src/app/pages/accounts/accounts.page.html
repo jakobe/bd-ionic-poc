@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" icon="ios-arrow-back" text=""></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Kontooverblik
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let item of items;" (click)="navigate()">
+        <ion-label>
+          <p class="title">{{item.title}}</p>
+          <p class="account-number">{{item.account}}</p>
+        </ion-label>
+        <p slot="end" class="balance">
+          {{item.balance | currency:item.currency:''}}
+        </p>
+        <ion-icon *ngIf="platform.is('android')" name="ios-arrow-forward" slot="end" class="details" color="primary"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  

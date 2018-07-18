@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-page-list',
-  templateUrl: 'list.page.html',
-  styleUrls: ['list.page.scss']
+  selector: 'accounts',
+  templateUrl: './accounts.page.html',
+  styleUrls: ['./accounts.page.scss'],
 })
-export class ListPage implements OnInit {
-  private selectedItem: any;
+export class AccountsPage implements OnInit {
+
+  
+
   private accounts = [
     {
       title: 'Lønkonto',
@@ -40,15 +43,17 @@ export class ListPage implements OnInit {
       account: '7915-0000170112'
     }
   ];
+  
   public items: Array<{ title: string; balance: number; currency: string; account: string }> = [];
-  constructor(public platform: Platform) {
-    this.items = [...this.accounts];
-  }
+  
+  constructor(public platform: Platform, private router:Router) {}
 
   ngOnInit() {
+    this.items = [...this.accounts];   
   }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
+
+  navigate() {
+    this.router.navigateByUrl('/transactions');
+  }
+
 }

@@ -10,11 +10,11 @@ export class HomePage {
   public appPages = [
     {
       title: 'Velkommen',
-      url: '/home'
+      url: '/'
     },
     {
       title: 'Kontooverblik',
-      url: '/list'
+      url: '/accounts'
     },
     {
       title: 'Depoter og puljer',
