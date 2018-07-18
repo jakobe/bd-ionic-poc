@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-home',
@@ -57,4 +58,11 @@ export class HomePage {
       url: ''
     }
   ];
+  
+  constructor(private router:Router) {}
+
+
+  navigate(url:string) {
+    this.router.navigateByUrl(url);
+  }
 }

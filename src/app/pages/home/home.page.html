@@ -4,25 +4,19 @@
       <ion-button>
         <ion-icon name="settings"></ion-icon>
       </ion-button>
-      <!-- <ion-button slot="end">
-          <ion-icon name="mail"></ion-icon>
-        </ion-button> -->
     </ion-buttons>
     <ion-buttons slot="end">
         <ion-button>
           <ion-icon name="mail-unread"></ion-icon>
         </ion-button>
       </ion-buttons>
-    <!-- <ion-title>
-      Sydbank Mobilbank
-    </ion-title> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="menu-wrapper">
     <ion-list>
-      <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" *ngFor="let p of appPages; let idx = index" [ngClass]="{'active' : idx === 0}">
+      <ion-item [routerDirection]="'forward'" (click)="navigate(p.url)" *ngFor="let p of appPages; let idx = index" [ngClass]="{'active' : idx === 0}">
         <ion-label>
           {{p.title}}
         </ion-label>
