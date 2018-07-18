@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-        <ion-back-button defaultHref="/home" icon="ios-arrow-back"></ion-back-button>
+        <ion-back-button defaultHref="/home" icon="ios-arrow-back" text=""></ion-back-button>
     </ion-buttons>
     <ion-title>
       Kontooverblik
@@ -11,7 +11,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of items" routerLink="/list">
+    <ion-item *ngFor="let item of items" routerLink="/transactions">
       <ion-label>
         <p class="title">{{item.title}}</p>
         <p class="account-number">{{item.account}}</p>

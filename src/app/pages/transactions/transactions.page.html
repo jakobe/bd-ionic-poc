@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home" icon="ios-arrow-back" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Kontobevægelser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ng-container *ngFor="let transaction of transactions; let idx = index;">
+          <ion-item-divider *ngIf="idx === 0 || transaction.date.getMonth() != transactions[idx-1].date.getMonth()">
+              {{transaction.date | date:'MMMM'}}
+          </ion-item-divider>
+          <!-- <div *ngIf="item == list[i-1]"></div>
+          <div *ngIf="item == list[0]"></div> -->
+          <ion-item>
+              <ion-icon slot="start" [name]="transaction.type" color="primary"></ion-icon>
+              <ion-label>
+                <p class="title">{{transaction.title}}</p>
+                <p class="date">{{transaction.date | date:'dd.MM.yy'}}</p>
+              </ion-label>
+              <p slot="end" class="amount">
+                {{transaction.amount | currency:transaction.currency:''}}
+              </p>
+              <ion-icon *ngIf="platform.is('android')" name="ios-arrow-forward" slot="end" class="details" color="primary"></ion-icon>
+            </ion-item>
+      </ng-container>
+      
+    </ion-list>
+    <!--
+      <div *ngIf="selectedItem" padding>
+        You navigated here from <b>{{selectedItem.title }}</b>
+      </div>
+    -->
+  </ion-content>
