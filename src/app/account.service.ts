@@ -62,7 +62,7 @@ export class AccountService {
       }
     ];
 
-    for (let month = 0; month < 11; month++) {
+    for (let month = 0; month <= 11; month++) {
       let transactions = [...transactionTypes];
       while( transactions.length ) {
         let transactionCopy = {...this.popRandomElement(transactions)};
