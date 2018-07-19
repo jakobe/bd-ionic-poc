@@ -3,13 +3,11 @@ import { Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'accounts',
+  selector: 'app-page-accounts',
   templateUrl: './accounts.page.html',
   styleUrls: ['./accounts.page.scss'],
 })
 export class AccountsPage implements OnInit {
-
-  
 
   private accounts = [
     {
@@ -43,13 +41,13 @@ export class AccountsPage implements OnInit {
       account: '7915-0000170112'
     }
   ];
-  
+
   public items: Array<{ title: string; balance: number; currency: string; account: string }> = [];
-  
-  constructor(public platform: Platform, private router:Router) {}
+
+  constructor(public platform: Platform, private router: Router) {}
 
   ngOnInit() {
-    this.items = [...this.accounts];   
+    this.items = [...this.accounts];
   }
 
   navigate() {

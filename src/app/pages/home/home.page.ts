@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  
+
   public appPages = [
     {
       title: 'Velkommen',
@@ -58,11 +58,11 @@ export class HomePage {
       url: ''
     }
   ];
-  
-  constructor(private router:Router) {}
+
+  constructor(private router: Router) {}
 
 
-  navigate(url:string) {
+  navigate(url: string) {
     this.router.navigateByUrl(url);
   }
 }

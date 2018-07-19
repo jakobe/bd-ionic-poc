@@ -8,7 +8,7 @@ export class AccountService {
   public transactions: Array<{ title: string; amount: number; currency: string; date: Date, type: string }> = [];
 
   constructor() {
-    
+
     const today = new Date();
 
     const transactionTypes = [
@@ -63,9 +63,9 @@ export class AccountService {
     ];
 
     for (let month = 0; month <= 11; month++) {
-      let transactions = [...transactionTypes];
-      while( transactions.length ) {
-        let transactionCopy = {...this.popRandomElement(transactions)};
+      const transactions = [...transactionTypes];
+      while (transactions.length) {
+        const transactionCopy = {...this.popRandomElement(transactions)};
         transactionCopy.date = this.addDays(today, (-30 * month)),
         transactionCopy.amount = (Math.round(this.randomFromInterval(transactionCopy.amountMin, transactionCopy.amountMax) * 10) / 10);
         this.transactions.push(transactionCopy);
@@ -75,7 +75,7 @@ export class AccountService {
   }
 
   private addDays(date, days) {
-    var newDate = new Date(date);
+    const newDate = new Date(date);
     newDate.setDate(newDate.getDate() + days);
     return newDate;
   }
@@ -86,13 +86,11 @@ export class AccountService {
     return element;
   }
 
-  private randomIntFromInterval(min,max)
-  {
-      return Math.floor(this.randomFromInterval(min,max));
+  private randomIntFromInterval(min, max) {
+      return Math.floor(this.randomFromInterval(min, max));
   }
 
-  private randomFromInterval(min,max)
-  {
+  private randomFromInterval(min, max) {
       return Math.random() * (max - min) + min;
   }
 
