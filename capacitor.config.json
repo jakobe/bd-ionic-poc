@@ -1,0 +1,6 @@
+{
+  "appId": "dk.basher.bdionicpoc",
+  "appName": "Sydbank Ionic POC",
+  "bundledWebRuntime": false,
+  "webDir": "docs"
+}
