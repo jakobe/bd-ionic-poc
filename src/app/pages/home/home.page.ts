@@ -27,7 +27,7 @@ export class HomePage {
     },
     {
       title: 'Overførsel',
-      url: ''
+      url: '/transfer'
     },
     {
       title: 'Kortoversigt',

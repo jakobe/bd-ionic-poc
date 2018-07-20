@@ -22,4 +22,4 @@ const routes: Routes = [
   ],
   declarations: [TransferPage]
 })
-export class AccountsPageModule {}
+export class TransferPageModule {}
