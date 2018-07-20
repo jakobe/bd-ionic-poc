@@ -13,6 +13,10 @@ const routes: Routes = [
   { 
     path: 'transactions',
     loadChildren: './pages/transactions/transactions.module#TransactionsPageModule'
+  },
+  { 
+    path: 'transfer',
+    loadChildren: './pages/transfer/transfer.module#TransferPageModule'
   }
 ];
 @NgModule({

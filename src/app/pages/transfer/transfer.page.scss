@@ -1,0 +1,22 @@
+ion-content {
+    background-color: transparent;
+}
+
+:host:before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    z-index: -1;
+    display: block;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    ), url('assets/img/frontpage-bg.jpg');
+    background-size: 380%;
+    background-repeat: no-repeat;   
+    background-position: bottom 50% right 40%;
+    filter: blur(10px);
+}
