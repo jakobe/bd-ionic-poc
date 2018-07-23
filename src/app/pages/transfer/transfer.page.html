@@ -10,6 +10,56 @@
   </ion-header>
   
   <ion-content>
-   Overførsel
+    <form>
+    
+      <ion-item>
+        <ion-label>Beløb</ion-label>
+        <ion-input type="number" class="amount"></ion-input>
+        <ion-note item-end>kr</ion-note>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Fra konto</ion-label>
+        <ion-select [(ngModel)]="fromAccount" name="fromAccount">
+          <ion-select-option value="l">Lønkonto</ion-select-option>
+          <ion-select-option value="b">Budgetkonto</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Til konto</ion-label>
+        <ion-select [(ngModel)]="toAccount" name="toAccount">
+          <ion-select-option value="l">Lønkonto</ion-select-option>
+          <ion-select-option value="m">Madkonto</ion-select-option>
+          <ion-select-option value="b">Budgetkonto</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item class="form-section">
+        <ion-label position="stacked">Tekst til egen konto</ion-label>
+        <ion-input placeholder="Tekst til egen konto"></ion-input>
+      </ion-item>
+  
+      <ion-item class="form-section">
+        <ion-label position="stacked">Tekst til modtagers konto</ion-label>
+        <ion-input placeholder="Tekst til modtager"></ion-input>
+      </ion-item>
+  
+      <ion-item class="form-section">
+        <ion-label>Dato</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" min="{{minDate}}" max="2021-12-31" value="{{transferDate}}" name="date"></ion-datetime>
+      </ion-item>
+
+      <ion-item class="form-section">
+        <ion-label>Gem modtager</ion-label>
+        <ion-toggle [(ngModel)]="save" name="save"></ion-toggle>
+      </ion-item>
+      <ion-item *ngIf="save">
+        <ion-input placeholder="Modtagers navn"></ion-input>
+      </ion-item>
+  
+      <ion-button class="form-button">Overfør</ion-button>
+  
+    </form>
   </ion-content>
   

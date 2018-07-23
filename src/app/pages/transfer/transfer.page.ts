@@ -8,6 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['transfer.page.scss'],
 })
 export class TransferPage implements OnInit {
+  private fromAccount;
+  private toAccount;
+  private minDate = (new Date()).toISOString();
+  private transferDate = this.minDate;
+  private save = false;
 
   constructor(public platform: Platform, private router: Router) {}
 
