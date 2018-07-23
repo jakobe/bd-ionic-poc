@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TouchID } from '@ionic-native/touch-id/ngx';
 
 @Component({
   selector: 'app-page-home',
@@ -59,8 +60,23 @@ export class HomePage {
     }
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private touchId: TouchID) {}
 
+  ngOnInit() {
+    this.touchId.isAvailable()
+      .then(
+        res => console.log('TouchID is available'),
+        err =>  console.error('TouchID is NOT available', err)
+      )
+      this.touchId.verifyFingerprintWithCustomPasswordFallbackAndEnterPasswordLabel(
+        'Log venligst ind med dit fingeraftryk', 'Log ind med NemID i stedet')
+        .then(
+          res => console.log('Ok', res),
+          err => console.error('Error', err)
+        );
+  }
+
+  
 
   navigate(url: string) {
     this.router.navigateByUrl(url);
