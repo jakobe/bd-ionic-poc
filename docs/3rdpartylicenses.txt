@@ -340,6 +340,10 @@ Apache License
  See the License for the specific language governing permissions and
  limitations under the License.
 
+@ionic-native/touch-id@5.0.0-beta.14
+MIT
+MIT
+
 @angular/platform-browser@6.0.9
 MIT
 MIT
@@ -348,7 +352,7 @@ MIT
 MIT
 MIT
 
-@ionic-native/core@5.0.0-beta.13
+@ionic-native/core@5.0.0-beta.14
 MIT
 MIT
 
