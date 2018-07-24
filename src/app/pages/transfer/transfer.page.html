@@ -20,7 +20,7 @@
   
       <ion-item>
         <ion-label>Fra konto</ion-label>
-        <ion-select [(ngModel)]="fromAccount" name="fromAccount">
+        <ion-select value="{{fromAccount}}" name="fromAccount">
           <ion-select-option value="l">Lønkonto</ion-select-option>
           <ion-select-option value="b">Budgetkonto</ion-select-option>
         </ion-select>
@@ -28,7 +28,7 @@
   
       <ion-item>
         <ion-label>Til konto</ion-label>
-        <ion-select [(ngModel)]="toAccount" name="toAccount">
+        <ion-select value="{{toAccount}}" name="toAccount">
           <ion-select-option value="l">Lønkonto</ion-select-option>
           <ion-select-option value="m">Madkonto</ion-select-option>
           <ion-select-option value="b">Budgetkonto</ion-select-option>
@@ -36,8 +36,8 @@
       </ion-item>
   
       <ion-item class="form-section">
-        <ion-label position="stacked">Tekst til egen konto</ion-label>
-        <ion-input placeholder="Tekst til egen konto"></ion-input>
+        <ion-label position="stacked">Tekst til min konto</ion-label>
+        <ion-input placeholder="Tekst til min konto"></ion-input>
       </ion-item>
   
       <ion-item class="form-section">

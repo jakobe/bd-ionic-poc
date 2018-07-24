@@ -19,7 +19,7 @@ export class HomePage {
     },
     {
       title: 'Depoter og puljer',
-      url: ''
+      url: '/pools'
     },
     {
       title: 'NetBoks',

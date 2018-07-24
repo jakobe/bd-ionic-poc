@@ -17,6 +17,18 @@ const routes: Routes = [
   { 
     path: 'transfer',
     loadChildren: './pages/transfer/transfer.module#TransferPageModule'
+  },
+  { path: 'pools', 
+    loadChildren: './pools/pools.module#PoolsPageModule' 
+  },
+  { path: 'pools2', 
+    loadChildren: './pools2/pools2.module#Pools2PageModule' 
+  },
+  { path: 'pools3', 
+    loadChildren: './pools3/pools3.module#Pools3PageModule' 
+  },
+  { path: 'pools4', 
+    loadChildren: './pools4/pools4.module#Pools4PageModule' 
   }
 ];
 @NgModule({
